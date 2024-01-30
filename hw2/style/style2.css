@@ -1,0 +1,42 @@
+.field input {
+    width: 100px;
+    height: 100px;
+    display: none; 
+}
+
+.field label {
+    display: block;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #dddddd;
+    transition: background 0.5s;
+    position: relative;
+}
+
+
+.field label::after {
+    content: "выкл";
+    position: absolute;
+    width: 65px;
+    height: 39px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:white;
+    left: -1px;
+    top: 0;
+    text-align: center;
+    line-height: 35px; 
+}
+
+.field input:checked + label {
+   
+    background-color: #eed598; 
+    
+}
+
+.field input:checked + label::after {
+    content: "вкл";
+    left: 35px; 
+} 
